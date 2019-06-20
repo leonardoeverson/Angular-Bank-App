@@ -1,3 +1,4 @@
+/* tslint:disable:prefer-const */
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import {inspect} from 'util';
@@ -36,8 +37,7 @@ export class CadastroClientesComponent implements OnInit {
     }
 
     cadastro() {
-        console.log(this.formCadastro.controls);
-        localStorage.setItem('cadastro', JSON.stringify(this.formCadastro.controls, this.getCircularReplacer()));
+        localStorage.setItem('cadastro', JSON.stringify(this.getDirtyValues(this.formCadastro)));
     }
 
     getCircularReplacer = () => {
@@ -51,5 +51,24 @@ export class CadastroClientesComponent implements OnInit {
             }
             return value;
         };
+    }
+
+    getDirtyValues(form: any) {
+        let dirtyValues = {};
+
+        Object.keys(form.controls)
+            .forEach(key => {
+                let currentControl = form.controls[key];
+
+                if (currentControl.dirty) {
+                    if (currentControl.controls) {
+                        dirtyValues[key] = this.getDirtyValues(currentControl);
+                    } else {
+                        dirtyValues[key] = currentControl.value;
+                    }
+                }
+            });
+
+        return dirtyValues;
     }
 }
