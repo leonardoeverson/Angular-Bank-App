@@ -26,14 +26,6 @@ export class CadastroClientesComponent implements OnInit {
             telefone :  [''],
             email:  ['']
         });
-
-        // this.formCadastro = new FormGroup({
-        //         nome : new FormControl(),
-        //         endereco : new FormControl(),
-        //         cpf : new FormControl(),
-        //         telefone : new FormControl(),
-        //         email: new FormControl()
-        // });
     }
 
     cadastro() {
