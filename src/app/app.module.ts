@@ -13,6 +13,9 @@ import {CadastroClientesComponent} from './cadastro-clientes/cadastro-clientes.c
 import {AppRoutingModule} from './app-routing.module';
 import { HomeLogadaComponent } from './home-logada/home-logada.component';
 import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
+import {AuthGuard} from '../auth.guard';
+import { LoginComponent } from './login/login.component';
+import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +25,9 @@ import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
         FooterComponent,
         CadastroClientesComponent,
         HomeLogadaComponent,
-        AcessoNegadoComponent
+        AcessoNegadoComponent,
+        LoginComponent,
+        CadastroConcluidoComponent
     ],
     imports: [
         BrowserModule,

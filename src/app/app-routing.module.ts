@@ -4,7 +4,7 @@ import {ContentComponent} from './content/content.component';
 import {CadastroClientesComponent} from './cadastro-clientes/cadastro-clientes.component';
 import {HomeLogadaComponent} from './home-logada/home-logada.component';
 import {AcessoNegadoComponent} from './acesso-negado/acesso-negado.component';
-import {AuthGuard} from '../../auth.guard';
+import {AuthGuard} from '../auth.guard';
 
 const routes: Routes = [{path: '', component: ContentComponent},
     {path: 'cadastro-clientes', component: CadastroClientesComponent},
