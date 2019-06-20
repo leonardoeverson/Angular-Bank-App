@@ -24,6 +24,6 @@ export class CadastroClientesComponent implements OnInit {
     }
 
     cadastro() {
-        console.log('ok');
+        console.log(this.formCadastro.controls);
     }
 }
