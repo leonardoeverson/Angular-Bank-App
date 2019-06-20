@@ -11,6 +11,8 @@ import {ContentComponent} from './content/content.component';
 import {FooterComponent} from './footer/footer.component';
 import {CadastroClientesComponent} from './cadastro-clientes/cadastro-clientes.component';
 import {AppRoutingModule} from './app-routing.module';
+import { HomeLogadaComponent } from './home-logada/home-logada.component';
+import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +20,9 @@ import {AppRoutingModule} from './app-routing.module';
         HeaderComponent,
         ContentComponent,
         FooterComponent,
-        CadastroClientesComponent
+        CadastroClientesComponent,
+        HomeLogadaComponent,
+        AcessoNegadoComponent
     ],
     imports: [
         BrowserModule,
